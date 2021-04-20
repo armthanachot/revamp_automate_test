@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.1 on win32)" generated="20210322 19:31:44.883" rpa="false" schemaversion="2">
+<suite id="s1" name="Revamp" source="D:\tutorials\revamp_test\revamp.robot">
+<test id="s1-t1" name="vision_page_en">
+<kw name="open web">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210322 19:31:45.060" level="INFO">Opening browser 'chrome' to base url 'http://192.168.2.164:8080'.</msg>
+<status status="PASS" starttime="20210322 19:31:45.060" endtime="20210322 19:31:51.280"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 19:31:51.280" endtime="20210322 19:31:51.398"/>
+</kw>
+<status status="PASS" starttime="20210322 19:31:45.060" endtime="20210322 19:31:51.398"/>
+</kw>
+<kw name="login">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210322 19:31:52.407" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210322 19:31:51.398" endtime="20210322 19:31:52.407"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>xpath=//input[@id='input-20']</arg>
+<arg>CTRL+A+DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210322 19:31:52.407" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to xpath=//input[@id='input-20'] element.</msg>
+<msg timestamp="20210322 19:31:52.699" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20210322 19:31:52.699" level="INFO">Sending key A</msg>
+<msg timestamp="20210322 19:31:52.699" level="INFO">Pressing special key DELETE down.</msg>
+<msg timestamp="20210322 19:31:52.699" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20210322 19:31:52.699" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20210322 19:31:52.407" endtime="20210322 19:31:52.713"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=//input[@id='input-20']</arg>
+<arg>tester@mail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 19:31:52.714" level="INFO">Typing text 'tester@mail.com' into text field 'xpath=//input[@id='input-20']'.</msg>
+<status status="PASS" starttime="20210322 19:31:52.713" endtime="20210322 19:31:52.844"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210322 19:31:53.847" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210322 19:31:52.844" endtime="20210322 19:31:53.847"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>xpath=//input[@id='input-23']</arg>
+<arg>CTRL+A+DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210322 19:31:53.847" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to xpath=//input[@id='input-23'] element.</msg>
+<msg timestamp="20210322 19:31:54.124" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20210322 19:31:54.124" level="INFO">Sending key A</msg>
+<msg timestamp="20210322 19:31:54.124" level="INFO">Pressing special key DELETE down.</msg>
+<msg timestamp="20210322 19:31:54.124" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20210322 19:31:54.124" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20210322 19:31:53.847" endtime="20210322 19:31:54.139"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=//input[@id='input-23']</arg>
+<arg>123456789</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 19:31:54.139" level="INFO">Typing text '123456789' into text field 'xpath=//input[@id='input-23']'.</msg>
+<status status="PASS" starttime="20210322 19:31:54.139" endtime="20210322 19:31:54.230"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=//span[contains(text(),'Login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 19:31:54.231" level="INFO">Clicking element 'xpath=//span[contains(text(),'Login')]'.</msg>
+<status status="PASS" starttime="20210322 19:31:54.230" endtime="20210322 19:31:54.282"/>
+</kw>
+<status status="PASS" starttime="20210322 19:31:51.398" endtime="20210322 19:31:54.282"/>
+</kw>
+<kw name="vision" library="vision">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210322 19:31:55.290" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210322 19:31:54.283" endtime="20210322 19:31:55.290"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html[1]/body[1]/div[1]/div[1]/nav[1]/div[2]/div[3]/div[2]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 19:31:55.290" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[1]/nav[1]/div[2]/div[3]/div[2]/div[1]'.</msg>
+<status status="PASS" starttime="20210322 19:31:55.290" endtime="20210322 19:31:55.352"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210322 19:31:56.359" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210322 19:31:55.352" endtime="20210322 19:31:56.359"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html[1]/body[1]/div[1]/div[1]/nav[1]/div[2]/div[3]/div[2]/div[2]/a[2]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 19:31:56.361" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[1]/nav[1]/div[2]/div[3]/div[2]/div[2]/a[2]/div[2]'.</msg>
+<status status="PASS" starttime="20210322 19:31:56.360" endtime="20210322 19:31:56.429"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210322 19:31:58.432" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 19:31:56.429" endtime="20210322 19:31:58.432"/>
+</kw>
+<status status="PASS" starttime="20210322 19:31:54.282" endtime="20210322 19:31:58.433"/>
+</kw>
+<kw name="vision_description_en" library="vision">
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 19:31:58.437" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[3]'.</msg>
+<status status="PASS" starttime="20210322 19:31:58.436" endtime="20210322 19:31:58.841"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210322 19:32:00.857" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210322 19:31:58.841" endtime="20210322 19:32:00.857"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>xpath=//*[@id="app"]/div[1]/main/div/div/div[2]/div[2]/div[2]/div/div[2]/form/div/div[1]/div/div/div[2]/div[2]/div</arg>
+<arg>CTRL+A+DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210322 19:32:00.857" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to xpath=//*[@id="app"]/div[1]/main/div/div/div[2]/div[2]/div[2]/div/div[2]/form/div/div[1]/div/div/div[2]/div[2]/div element.</msg>
+<msg timestamp="20210322 19:32:01.140" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20210322 19:32:01.140" level="INFO">Sending key A</msg>
+<msg timestamp="20210322 19:32:01.140" level="INFO">Pressing special key DELETE down.</msg>
+<msg timestamp="20210322 19:32:01.140" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20210322 19:32:01.140" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20210322 19:32:00.857" endtime="20210322 19:32:01.176"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>xpath=/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]</arg>
+<arg>quality product</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 19:32:01.177" level="INFO">Typing text 'quality product' into text field 'xpath=/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]'.</msg>
+<status status="PASS" starttime="20210322 19:32:01.176" endtime="20210322 19:32:01.340"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210322 19:32:02.344" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210322 19:32:01.341" endtime="20210322 19:32:02.344"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 19:32:02.345" level="INFO">Clicking element 'xpath=/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20210322 19:32:02.345" endtime="20210322 19:32:02.405"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210322 19:32:03.415" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210322 19:32:02.405" endtime="20210322 19:32:03.415"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=//*[@id="app"]/div[1]/main/div/div/div[2]/div[2]/div[2]/div/div[2]/form/div/div[1]/div/div/div[2]/div[2]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 19:32:03.417" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/main/div/div/div[2]/div[2]/div[2]/div/div[2]/form/div/div[1]/div/div/div[2]/div[2]/div'.</msg>
+<status status="PASS" starttime="20210322 19:32:03.416" endtime="20210322 19:32:03.456"/>
+</kw>
+<status status="PASS" starttime="20210322 19:31:58.435" endtime="20210322 19:32:03.457"/>
+</kw>
+<status status="PASS" starttime="20210322 19:31:45.059" endtime="20210322 19:32:03.457"/>
+</test>
+<status status="PASS" starttime="20210322 19:31:44.885" endtime="20210322 19:32:03.458"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Revamp">Revamp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
